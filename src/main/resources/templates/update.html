@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>update</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/save.css">
+</head>
+<body>
+<header>
+    Community
+</header>
+
+<nav>
+    <a href="/" style="margin-left: 30px; color: white;">홈</a>
+    <a href="/board/paging" style="margin-left: 30px; color: white;">게시판</a>
+    <a href="/board/save" style="margin-left: 30px; color: white;">게시글 업로드</a>
+</nav>
+
+<section>
+    <h2>게시글 수정</h2>
+<form action="/board/update" method="post" name="updateForm">
+    <input type="hidden" name="id" th:value="${boardUpdate.id}">
+    작성자 <input type="text" name="boardWriter" style="margin-left: 16px;" th:value="${boardUpdate.boardWriter}" readonly> <br>
+    비밀번호 <input type="text" name="boardPass" id="boardPass"> <br>
+    제목 <input type="text" name="boardTitle" style="margin-left: 31px;" th:value="${boardUpdate.boardTitle}"> <br>
+    내용<br> <textarea name="boardContents" cols="30" rows="10" th:text="${boardUpdate.boardContents}"></textarea> <br>
+    <input type="hidden" name="boardHits" th:value="${boardUpdate.boardHits}">
+    <input type="button" id="upload-button" value="수정" onclick="boardUpdate()">
+</form>
+</section>
+
+<footer>
+    Copyrightⓒ2024 All rights reserved.
+</footer>
+
+<script th:inline="javascript">
+    const boardUpdate = () => {
+        const pass = [[${boardUpdate.boardPass}]]
+        const inputPass = document.getElementById("boardPass").value
+        if (pass == inputPass) {
+            document.updateForm.submit()
+        } else {
+            alert("비밀번호가 일치하지 않습니다!")
+        }
+    }
+</script>
+</body>

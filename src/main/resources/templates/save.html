@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>save</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/save.css">
+</head>
+<body>
+<header>
+    Community
+</header>
+
+<nav>
+    <a href="/" style="margin-left: 30px; color: white;">홈</a>
+    <a href="/board/paging" style="margin-left: 30px; color: white;">게시판</a>
+    <a href="/board/save" style="margin-left: 30px; color: white;">게시글 업로드</a>
+</nav>
+
+<section>
+    <h2>게시글 업로드</h2>
+<form action="/board/save" method="post" enctype="multipart/form-data">
+    작성자 <input type="text" name="boardWriter" style="margin-left: 16px;"> <br>
+    비밀번호 <input type="text" name="boardPass"> <br>
+    제목 <input type="text" name="boardTitle" style="margin-left: 31px;"> <br>
+    내용<br> <textarea name="boardContents" cols="30" rows="10" ></textarea> <br>
+    <input type="submit" id="upload-button" value="업로드">
+</form>
+</section>
+
+<footer>
+    Copyrightⓒ2024 All rights reserved.
+</footer>
+</body>
+</html>

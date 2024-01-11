@@ -1,0 +1,20 @@
+
+form{
+    text-align: center;
+    padding-top: 20px;
+}
+
+#upload-button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #7979f6;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#upload-button:hover {
+    background-color: #4848ef;
+}

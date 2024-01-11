@@ -1,0 +1,50 @@
+section{
+    text-align: center;
+}
+
+table {
+    margin: 0 auto;
+    width: 40%;
+}
+
+th, td {
+    padding: 8px;
+}
+
+button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #7979f6;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #4848ef;
+}
+
+#comment-write-btn{
+    margin-top: 20px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #4848ef;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#comment-write-btn:hover {
+    background-color: #7979f6;
+}
+
+#comment-write{
+    margin-top: 20px;
+}
+
+#comment-list{
+    margin-top: 20px;
+}
